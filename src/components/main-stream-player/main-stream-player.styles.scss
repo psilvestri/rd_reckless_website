@@ -1,0 +1,11 @@
+.MainStreamPlayer{
+    position: relative;
+    margin: 30px auto 0px auto;
+    width: 100%;
+    background-color: blue;
+
+    .VideoPlayer{
+        margin: 0px auto 0px auto;
+        position: relative;
+    }
+}
