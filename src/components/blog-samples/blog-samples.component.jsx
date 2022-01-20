@@ -1,24 +1,20 @@
-const GhostContentAPI = require('@tryghost/content-api');
+import React from 'react'
 
-const api = new GhostContentAPI({
-    host: 'https://demo.ghost.io',
-    key: '22444f78447824223cefc48062',
-    version: "v3"
-  });
-  
-const BlogSamples = () => {
-    // fetch 5 posts, including related tags and authors
-    api.posts.browse({
-        filter: 'tag:'
-    })
-    .then((posts) => {
-        posts.forEach((post) => {
-            console.log(post.title);
-        });
-    })
-    .catch((err) => {
-        console.error(err);
-    })
-}
+import BlogPost from '../blog-post/blog-post.component'
+
+import './blog-samples.styles.scss'
+
+const BlogSamples = props => (
+    <div className='blog-samples'>
+        <h1> TEST </h1>
+        {props.posts.map(post => (
+            <BlogPost key={post.posts.id} post={post}/>
+        ))}
+        {console.log("here is the post id:")}
+        {console.log(props.posts.id)}
+        {console.log("that was the post id.")}
+
+    </div>
+)
 
 export default BlogSamples

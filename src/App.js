@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 import { Routes, Route } from "react-router-dom"
 
 import Header from "./components/header/header.component"
-import Home from "./pages/home/home.component"
-import Blog from "./pages/blog/blog.component"
-import About from "./pages/about/about.component"
-import Contact from "./pages/contact/contact.component"
+import HomePage from "./pages/home/home-page.component"
+import BlogPage from "./pages/blog/blog-page.component"
+import AboutPage from "./pages/about/about-page.component"
+import ContactPage from "./pages/contact/contact-page.component"
 
 import './App.scss'
 
@@ -17,21 +17,16 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
-    fetch('https://demo.ghost.io/ghost/api/v3/content/posts')
-    .then(response => response.json())    
-    .then(response => console.log(response))
-  }
-
   render() {
+
     return (
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={ <Home/> } />
-          <Route path="blog" element={ <Blog/> } />
-          <Route path="about" element={ <About/> } />
-          <Route path="contact" element={ <Contact/> } />
+          <Route path="/" element={ <HomePage/> } />
+          <Route path="blog" element={ <BlogPage/> } />
+          <Route path="about" element={ <AboutPage/> } />
+          <Route path="contact" element={ <ContactPage/> } />
         </Routes>
       </div>
     )

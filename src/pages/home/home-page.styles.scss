@@ -1,4 +1,4 @@
-.HomeContent {
+.home-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,13 +11,24 @@
       color: #808089;
     }
 
-    .Left{
+    .left{
       float: left;
       width: 30%;
       height: 150px;
       color: white;
       margin: 40px auto 40px 15%;
       font-size: 25px;
+      background-color: purple;
+    }
+
+    .right{
+      float: right;
+      width: 30%;
+      height: 150px;
+      color: white;
+      margin: 40px auto 40px 15%;
+      font-size: 25px;
+      background-color: orange;
     }
   }
 
